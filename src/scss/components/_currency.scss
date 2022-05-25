@@ -1,0 +1,359 @@
+ .container__main {
+   padding-top: 31px;
+
+   >*:first-child {
+     margin-right: 3.7%;
+     margin-bottom: 4%;
+   }
+
+   >*:nth-child(2) {
+     margin-bottom: 4%;
+   }
+
+   .container__left {
+     display: inline-block;
+     width: 43.9%;
+
+
+     >*:first-child {
+       margin-bottom: 44px;
+     }
+
+     @include tablet {
+       display: block;
+       margin-bottom: 44px;
+       width: 100%;
+     }
+   }
+ }
+
+ .currency {
+   display: inline-block;
+   padding: 50px;
+   vertical-align: top;
+   min-height: 100px;
+   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+   border-radius: 50px;
+
+   @include small-tablet {
+     padding-right: 12px;
+     padding-left: 12px;
+   }
+
+   &.skeleton {
+     height: 411px;
+
+     background-image:
+       linear-gradient(var(--col-gray-5)20px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0);
+
+     background-size:
+       30% 18px,
+       82% 23px,
+       82% 23px,
+       82% 23px,
+       82% 23px,
+       82% 23px,
+       82% 23px,
+       82% 23px,
+       82% 23px,
+       82% 23px;
+
+     background-position:
+       50px 10%,
+       50px 20%,
+       50px 30%,
+       50px 40%,
+       50px 50%,
+       50px 60%,
+       50px 70%,
+       50px 80%,
+       50px 90%;
+   }
+
+
+   &__title {
+     margin-bottom: 25px;
+     font-family: 'Work Sans', sans-serif;
+     font-weight: 700;
+     font-size: 20px;
+   }
+ }
+
+ .my-currency {
+   width: 100%;
+   height: max-content;
+
+   &__list {
+     @include list-reset;
+   }
+
+   &__item {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+
+     &:not(:last-child) {
+       margin-bottom: 23px;
+     }
+   }
+
+   &__code {
+     margin-right: 10px;
+     font-family: 'Work Sans', sans-serif;
+     font-weight: 600;
+     font-size: 20px;
+     line-height: 23px;
+   }
+
+   &__border {
+     display: inline-block;
+     margin-right: 10px;
+     width: 100%;
+     height: 18px;
+     border-bottom: 1px dashed #000000;
+   }
+
+   &__amount {
+     font-weight: 400;
+     font-size: 20px;
+     line-height: 23px;
+     letter-spacing: 0.1em;
+   }
+ }
+
+ .feed {
+   width: 52.4%;
+   background-color: #e5e5e5;
+
+   @include tablet {
+     display: block;
+     width: 100%;
+   }
+
+   &.skeleton {
+     height: 411px;
+
+     background-image:
+       linear-gradient(var(--col-gray-5)20px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0),
+       linear-gradient(var(--col-gray-5) 23px, transparent 0);
+
+     background-size:
+       56% 18px,
+       86% 23px,
+       86% 23px,
+       86% 23px,
+       86% 23px,
+       86% 23px,
+       86% 23px,
+       86% 23px,
+       86% 23px,
+       86% 23px;
+
+     background-position:
+       50px 12%,
+       50px 25%,
+       50px 35%,
+       50px 45%,
+       50px 55%,
+       50px 65%,
+       50px 75%,
+       50px 85%,
+       50px 95%;
+   }
+
+   &__list {
+     padding-left: 0;
+     overflow: hidden;
+   }
+
+   &__item {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+
+     &:not(:last-child) {
+       margin-bottom: 23px;
+     }
+
+     &.green .feed__border {
+       border-color: var(--col-success);
+     }
+
+     &.green .feed__triangle {
+       background-color: var(--col-success);
+     }
+
+     &.red .feed__border {
+       border-color: var(--col-error);
+     }
+
+     &.red .feed__triangle {
+       background-color: var(--col-error);
+       transform: rotate(180deg);
+     }
+   }
+
+   &__from-to {
+     margin-right: 10px;
+     font-weight: 600;
+     font-size: 20px;
+     line-height: 23px;
+   }
+
+   &__border {
+     display: inline-block;
+     margin-right: 10px;
+     width: 100%;
+     height: 18px;
+     border-bottom: 1px dashed #000000;
+   }
+
+   &__rate {
+     margin-right: 15px;
+     font-weight: 400;
+     font-size: 20px;
+     line-height: 23px;
+   }
+
+   &__triangle {
+     display: inline-block;
+     width: 20px;
+     height: 10px;
+     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+     background-color: var(--col-success);
+     transform-origin: center;
+   }
+ }
+
+ .exchange {
+   @include tablet {
+     display: block;
+     width: 100%;
+     height: auto;
+   }
+
+   &__form {
+     display: grid;
+     grid-template-columns: 74% 21%;
+     grid-template-rows: minmax(44px, auto) minmax(44px, auto);
+     grid-auto-rows: minmax(44px, auto);
+     column-gap: 25px;
+     row-gap: 15px;
+
+     @include small-desktop {
+       grid-template-columns: 65% 27%;
+     }
+
+     @include mobile {
+       grid-template-columns: 100%;
+       gap: 15px;
+     }
+   }
+
+   &__top {
+     grid-row: 1;
+     grid-column: 1;
+
+     @include mobile {
+       width: 100%;
+     }
+   }
+
+   label {
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 20px;
+
+     &:not(:last-child) {
+       display: inline-block;
+       margin-bottom: 15px;
+     }
+
+     @include small-desktop {
+       display: block;
+     }
+
+     @include mobile {
+       display: block;
+       width: 100%;
+       text-align: right;
+     }
+   }
+
+   &__select1,
+   &__select2 {
+     margin-left: 10px;
+     width: 134px;
+     height: 44px;
+     border: 1px solid var(--col-gray-5);
+     border-radius: 7px;
+   }
+
+   &__select1 {
+     margin-right: 10px;
+
+     @include mobile {
+       margin-right: 0;
+     }
+   }
+
+   &__bottom {
+     grid-row: 2;
+     grid-column: 1;
+
+     @include mobile {
+       label {
+         text-align: left;
+       }
+     }
+   }
+
+   &__input {
+     margin-left: 8px;
+     padding: 8px 16px;
+     width: 80%;
+     height: 44px;
+     border: 1px solid var(--col-gray-5);
+     border-radius: 7px;
+
+     @include small-tablet {
+       margin-top: 10px;
+     }
+   }
+
+   &__send.btn {
+     grid-row: 1 / 3;
+     grid-column: 2;
+     padding-left: 10px;
+     padding-right: 10px;
+     width: 104px;
+     text-align: center;
+     font-size: 16px;
+
+     @include mobile {
+       grid-row: 3 / 4;
+       grid-column: 1;
+       margin-left: auto;
+     }
+   }
+ }
+
+ [data-simplebar] {
+   position: absolute;
+ }

@@ -1,0 +1,446 @@
+.skeleton {
+  background-repeat: no-repeat;
+  animation: fade 1s linear infinite alternate;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.account {
+  padding: 22px;
+  width: 100%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  background-color: var(--col-white);
+
+  &.skeleton {
+    background-image: linear-gradient(var(--col-gray-5) 18px, transparent 0),
+      linear-gradient(var(--col-gray-5) 14px, transparent 0),
+      linear-gradient(var(--col-gray-5) 13px, transparent 0),
+      linear-gradient(var(--col-gray-5) 13px, transparent 0),
+      linear-gradient(var(--col-gray-5) 52px, transparent 0),
+    ;
+
+    background-size:
+      70% 18px,
+      35% 14px,
+      40% 13px,
+      25% 13px,
+      27% 52px;
+
+    background-position:
+      22px 20%,
+      22px 40%,
+      22px 65%,
+      22px 77%,
+      92% 88%;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__number {
+    display: block;
+    margin-bottom: 9px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  &__balance {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    padding-top: 22px;
+
+    @include mobile {
+      width: 64%;
+    }
+  }
+
+  &__transaction {
+    margin-top: 22px;
+    width: 200px;
+    height: 13px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+
+  a.btn {
+    display: flex;
+    margin-top: 20px;
+    //width: 110px;
+    padding: 10px 25px;
+    height: 52px;
+    align-items: center;
+  }
+}
+
+.autocomplete {
+  position: absolute;
+  top: 44px;
+  left: 41%;
+  z-index: 5;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  width: 300px;
+  background-color: var(--col-white);
+  border: 1px solid var(--col-gray-5);
+  border-radius: 7px;
+  font-size: 16px;
+
+  &__item {
+    margin-bottom: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+
+    @include for-desktop {
+      &:hover {
+        background-color: var(--col-gray-5);
+      }
+    }
+
+    &.active {
+      background-color: var(--col-gray-5);
+    }
+  }
+}
+
+.account-number {
+  display: block;
+  font-size: 34px;
+
+  @include tablet {
+    margin-bottom: 15px;
+  }
+
+  @include big-mobile {
+    font-size: 20px;
+  }
+}
+
+.account-balance {
+  display: block;
+  margin-right: 50px;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 20px;
+
+  @include tablet {
+    display: inline-block;
+  }
+}
+
+.account-balance-number {
+  font-size: 20px;
+}
+
+.info {
+  >*:first-child {
+    margin-right: 3.7%;
+    margin-bottom: 50px;
+  }
+}
+
+.trans-form {
+  display: inline-block;
+  padding: 25px 48px;
+  vertical-align: top;
+  width: 45.2%;
+  height: 288px;
+  border-radius: 50px;
+  background-color: var(--col-gray-7);
+
+  @include big-mobile {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include tablet {
+    display: block;
+    margin-right: 0;
+    width: 606px;
+  }
+
+  @include big-mobile {
+    width: 100%;
+  }
+
+  &.skeleton {
+    height: 288px;
+    background-image:
+      linear-gradient(var(--col-gray-5) 30px, transparent 0),
+      linear-gradient(var(--col-gray-5) 30px, transparent 0),
+      linear-gradient(var(--col-gray-5) 44px, transparent 0),
+      linear-gradient(var(--col-gray-5) 30px, transparent 0),
+      linear-gradient(var(--col-gray-5) 44px, transparent 0),
+      linear-gradient(var(--col-gray-5) 50px, transparent 0);
+
+    background-size:
+      35% 20px,
+      30% 20px,
+      40% 44px,
+      25% 20px,
+      40% 44px,
+      27% 50px;
+
+    background-position:
+      50px 10%,
+      25% 30%,
+      87% 28%,
+      30% 58%,
+      87% 60%,
+      72% 90%;
+  }
+
+  &__legend {
+    margin-bottom: 25px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &--select {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 19px;
+        top: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: #182233;
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+        transform: translateY(-50%);
+
+        @include big-mobile {
+          top: 70%;
+        }
+      }
+    }
+  }
+
+  &__input {
+    margin-left: 18px;
+    padding: 10px 16px;
+    width: 300px;
+    height: 44px;
+    border: 1px solid var(--col-gray-5);
+    border-radius: 7px;
+    font-size: 16px;
+    background-color: var(--col-white);
+
+    @include big-mobile {
+      margin-top: 10px;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    &::placeholder {
+      color: var(--col-gray-4);
+    }
+  }
+
+  &__submit.btn {
+    position: relative;
+    margin-left: 41%;
+    padding: 16px 24px 16px 58px;
+    font-size: 16px;
+
+    @include big-mobile {
+      margin-left: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      width: 24px;
+      height: 24px;
+      background-image: url('../assets/img/mail.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.chart {
+  display: inline-block;
+  padding: 26px 48px 20px;
+  width: 51%;
+  height: 288px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  background-color: var(--col-white);
+  cursor: pointer;
+
+  @include tablet {
+    display: block;
+    margin-bottom: 50px;
+    width: 606px;
+  }
+
+  @include big-mobile {
+    width: 100%;
+  }
+
+  &.skeleton {
+    background-image:
+      linear-gradient(var(--col-gray-5) 30px, transparent 0),
+      linear-gradient(var(--col-gray-5) 69%, transparent 0),
+      linear-gradient(var(--col-gray-5) 55%, transparent 0),
+      linear-gradient(var(--col-gray-5) 78%, transparent 0),
+      linear-gradient(var(--col-gray-5) 69%, transparent 0),
+      linear-gradient(var(--col-gray-5) 63%, transparent 0),
+      linear-gradient(var(--col-gray-5) 52%, transparent 0),
+      linear-gradient(var(--col-gray-5) 68%, transparent 0),
+      linear-gradient(var(--col-gray-5) 63%, transparent 0),
+      linear-gradient(var(--col-gray-5) 75%, transparent 0),
+      linear-gradient(var(--col-gray-5) 70%, transparent 0),
+      linear-gradient(var(--col-gray-5) 73%, transparent 0),
+      linear-gradient(var(--col-gray-5) 50%, transparent 0),
+      linear-gradient(var(--col-gray-5) 20px, transparent 0),
+      linear-gradient(var(--col-gray-5) 20px, transparent 0);
+
+    background-size:
+      250px 20px,
+      5% 66%,
+      5% 66%,
+      5% 66%,
+      5% 66%,
+      5% 66%,
+      5% 66%,
+      5% 66%,
+      5% 63%,
+      5% 75%,
+      5% 70%,
+      5% 73%,
+      5% 50%,
+      100px 20px,
+      60px 20px;
+
+    background-position:
+      5% 25px,
+      5% 110%,
+      12% 137%,
+      19% 93%,
+      26% 110%,
+      33% 120%,
+      40% 142%,
+      47% 112%,
+      54% 115%,
+      61% 105%,
+      68% 112%,
+      75% 110%,
+      82% 117%,
+      89% 20%,
+      90% 80%;
+  }
+
+  &.chart-6.skeleton {
+    &.skeleton {
+      background-image:
+        linear-gradient(var(--col-gray-5) 30px, transparent 0),
+        linear-gradient(var(--col-gray-5) 69%, transparent 0),
+        linear-gradient(var(--col-gray-5) 55%, transparent 0),
+        linear-gradient(var(--col-gray-5) 78%, transparent 0),
+        linear-gradient(var(--col-gray-5) 69%, transparent 0),
+        linear-gradient(var(--col-gray-5) 63%, transparent 0),
+        linear-gradient(var(--col-gray-5) 52%, transparent 0),
+        linear-gradient(var(--col-gray-5) 20px, transparent 0),
+        linear-gradient(var(--col-gray-5) 20px, transparent 0);
+
+      background-size:
+        250px 20px,
+        8% 69%,
+        8% 55%,
+        8% 78%,
+        8% 69%,
+        8% 63%,
+        8% 52%,
+        100px 20px,
+        60px 20px;
+
+      background-position:
+        15% 25px,
+        15% 120%,
+        26% 120%,
+        38% 110%,
+        49% 120%,
+        60% 120%,
+        71% 120%,
+        90% 20%,
+        84% 80%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+
+
+.history {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 50px;
+
+  .chart.skeleton {
+    width: 100%;
+  }
+}
+
+.chart.dynamic {
+  margin-bottom: 0;
+  width: 100%;
+  cursor: initial;
+}
+
+.chart.proportion {
+  width: 100%;
+  cursor: initial;
+}
