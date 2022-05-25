@@ -40,7 +40,7 @@ export async function renderCashDispensersInfo() {
 
   // Initializing and adding the Google map
   const loader = new Loader({
-    apiKey: "AIzaSyCK11BKBD28fHfL-72EjwlvxduSqFZE4ro",
+    apiKey: "",
     version: "weekly",
   });
 
