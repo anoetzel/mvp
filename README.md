@@ -1,4 +1,5 @@
 # About MVP
+![](https://github.com/anoetzel/crm/raw/main/example.bmp)
 My job was frontend, the backend I'd obtained.
 
 To start the backend: `npm run start`
