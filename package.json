@@ -3,7 +3,7 @@
   "name": "mvp",
   "author": "Anna Nötzel",
   "keywords": ["mvp"],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "browserslist": [
@@ -12,9 +12,9 @@
     "> 1%"
   ],
   "scripts": {
-    "start": "node ./backend/index.js",
+    "start:backend": "node ./backend/index.js",
+    "start:frontend": "cross-env NODE_ENV=development webpack serve --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "dev": "cross-env NODE_ENV=development webpack serve --mode development",
     "lint": "eslint ./",
     "lint:fix": "eslint ./ --fix",
     "test": "jest __tests__",

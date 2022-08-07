@@ -1,11 +1,14 @@
-# About MVP
+# About this MVP
 ![](https://github.com/anoetzel/mvp/raw/main/coin.bmp)
 My job was frontend, the backend (with local DB) I'd obtained.
 
-To start the backend: `npm run start`
-All commands are in the package.json inclusive the unit- and end-to-end tests.
+Start the backend: `npm run start:backend`
 
-To sign in use:
+Start the frontend: `npm run start:frontend`
+
+To run the unit- and end-to-end tests see the commands in package.json.
+
+To sign in:
 * Login: `developer`
 * Password: `skillbox`
 
