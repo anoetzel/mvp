@@ -1,7 +1,9 @@
 {
   "private": true,
   "name": "mvp",
-  "version": "1.0.0",
+  "author": "Anna Nötzel",
+  "keywords": ["mvp"],
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "browserslist": [
@@ -18,8 +20,6 @@
     "test": "jest __tests__",
     "cypress": "cypress open"
   },
-  "keywords": [],
-  "author": "Anna Nötzel",
   "license": "UNLICENSED",
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.14.3",
@@ -55,6 +55,8 @@
     "html-webpack-plugin": "^5.5.0",
     "image-minimizer-webpack-plugin": "^3.2.3",
     "imagemin": "^8.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
     "jest": "^28.0.2",
     "jest-environment-jsdom": "^28.0.2",
     "mini-css-extract-plugin": "^2.6.0",

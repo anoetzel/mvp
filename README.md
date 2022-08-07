@@ -1,6 +1,6 @@
 # About MVP
 ![](https://github.com/anoetzel/mvp/raw/main/coin.bmp)
-My job was frontend, the backend I'd obtained.
+My job was frontend, the backend (with local DB) I'd obtained.
 
 To start the backend: `npm run start`
 All commands are in the package.json inclusive the unit- and end-to-end tests.
@@ -18,7 +18,7 @@ You can transfer money to these accounts:
 - 5555341244441115
 
 ## Used technologies
-JavaScript, SCSS, HTML, Websocket, API, session- and localStorage, webpack 5.
+JavaScript, SCSS, HTML, Websocket, API, session- and localStorage, Webpack 5.
 
 
 
